@@ -41,7 +41,10 @@
     "stylelint-order": "^3.1.0"
   },
   "dependencies": {
-    "@henris/output": "^0.0.6",
+    "@henris/custom": "0.0.2",
+    "@henris/default": "0.0.2",
+    "@henris/grid": "0.0.11",
+    "@henris/output": "0.0.6",
     "@henris/utils": "^0.0.14"
   }
 }

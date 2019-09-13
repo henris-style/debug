@@ -1,2 +1,9 @@
-// Output
+@import 'node_modules/@henris/default/index.scss';
+@import 'node_modules/@henris/utils/index.scss';
+@import 'node_modules/@henris/custom/index.scss';
+
+$output: set-output(css, true);
+$output: set-output(debug-full, false);
+
+@import 'node_modules/@henris/output/index.scss';
 @import 'src/index';
