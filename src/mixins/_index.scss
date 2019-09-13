@@ -1,0 +1,39 @@
+@mixin debug-warning($text) {
+	position: relative;
+	outline: 1px dashed red;
+	&::before {
+		content: "#{$text}";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: red;
+		color: white;
+		padding: 0.25rem 0.5rem;
+	}
+}
+
+
+@mixin debug-layout{
+	body * { background-color: rgba(255,0,0,.2); }
+	body * * { background-color: rgba(0,255,0,.2); }
+	body * * * { background-color: rgba(0,0,255,.2); }
+	body * * * * { background-color: rgba(255,0,255,.2); }
+	body * * * * * { background-color: rgba(0,255,255,.2); }
+	body * * * * * * { background-color: rgba(255,255,0,.2); }
+	body * * * * * * * { background-color: rgba(255,0,0,.2); }
+	body * * * * * * * * { background-color: rgba(0,255,0,.2); }
+	body * * * * * * * * * { background-color: rgba(0,0,255,.2); }
+
+	b > div,
+	i > div,
+	q > div,
+	em > div,
+	abbr > div,
+	cite > div,
+	span > div,
+	small > div,
+	label > div,
+	strong > div {
+		@include debug-warning("You shouldn\'t use a div in an inline element");
+	}
+}
